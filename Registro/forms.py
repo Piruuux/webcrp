@@ -18,6 +18,7 @@ class FormRegistro(forms.Form):
     talle_de_remera = forms.CharField()
     categoria  = forms.CharField()
     email=forms.EmailField()
+    fields = '__all__'
     class Meta:
         model = Usuario
         fields = '__all__'
