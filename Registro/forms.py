@@ -5,7 +5,7 @@ from django.contrib.admin import widgets
 class DateInput(forms.DateInput):
     input_type = 'date'
 
-class FormRegistro(forms.Form):
+class FormRegistro(forms.ModelForm):
     nombre = forms.CharField()
     apellido = forms.CharField()
     genero = forms.CharField()

@@ -29,6 +29,8 @@ tipos_generos = [
     (2, 'Femenino'),
     (3, 'Otros')
 ]
+
+
 class Usuario(models.Model):
     nombre = models.CharField(max_length=40, null=True)
     apellido = models.CharField(max_length=40, null=True)
@@ -47,4 +49,4 @@ class Usuario(models.Model):
     email=models.EmailField()
 
     def __str__(self):
-        return self.nombre
+        return self.Usuario

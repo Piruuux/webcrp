@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import pymysql
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -79,14 +80,15 @@ WSGI_APPLICATION = 'webcrp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'MARATON',
+        'NAME': 'Webcrp',
         'USER': 'root',
-        'PASSWORD': '1000',
-        'HOST': 'LOCALHOST',
+        'PASSWORD': '2000',
+        'HOST': 'LocalHost',
         'PORT': '3306',
         
     }
 }
+
 
 
 
