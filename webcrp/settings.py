@@ -79,13 +79,16 @@ WSGI_APPLICATION = 'webcrp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'webcrpDB',
-        'USER': 'JuanCruz',
-        'PASSWORD': 'pass',
-        'HOST': 'localhost',
+        'NAME': 'MARATON',
+        'USER': 'root',
+        'PASSWORD': '1000',
+        'HOST': 'LOCALHOST',
         'PORT': '3306',
+        
     }
 }
+
+
 
 
 # Password validation

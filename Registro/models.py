@@ -45,3 +45,6 @@ class Usuario(models.Model):
     categoria  = models.CharField(max_length=40, null=True,
             choices=tipos_categorias, default=0)
     email=models.EmailField()
+
+    def __str__(self):
+        return self.nombre
