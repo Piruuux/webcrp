@@ -26,4 +26,5 @@ class FormRegistro(forms.ModelForm):
                 attrs={'type': 'date', 'placeholder': 'yyyy-mm-dd (DOB)', 'class': 'form-control'}
             )
         }
-    
+    def __str__(self):
+        return self.FormRegistro

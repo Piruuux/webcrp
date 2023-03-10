@@ -32,21 +32,33 @@ tipos_generos = [
 
 
 class Usuario(models.Model):
-    nombre = models.CharField(max_length=40, null=True)
-    apellido = models.CharField(max_length=40, null=True)
-    genero = models.CharField(max_length=40, null=True,
+    nombre = models.CharField(max_length=40,)
+    apellido = models.CharField(max_length=40,)
+    genero = models.CharField(max_length=40,
             choices=tipos_generos, default=0)
-    fecha_de_nacimiento = models.DateField(null=True)
-    pais = models.CharField(max_length=40, null=True)
-    estado = models.CharField(max_length=40, null=True)
-    dni = models.IntegerField(null=True)
-    telefono = models.IntegerField(null=True)
-    grupo_de_running = models.CharField(max_length=40, null=True)
-    talle_de_remera = models.CharField(max_length=40, null=True,
+    fecha_de_nacimiento = models.DateField()
+    pais = models.CharField(max_length=40,)
+    estado = models.CharField(max_length=40,)
+    dni = models.IntegerField()
+    telefono = models.IntegerField()
+    grupo_de_running = models.CharField(max_length=40,)
+    talle_de_remera = models.CharField(max_length=40,
             choices=tipos_remeras, default=0)
-    categoria  = models.CharField(max_length=40, null=True,
+    categoria  = models.CharField(max_length=40,
             choices=tipos_categorias, default=0)
     email=models.EmailField()
 
     def __str__(self):
         return self.Usuario
+
+
+
+
+class Inscripcion(models.Model):
+    nombre = models.CharField(max_length=40,)
+    apellido = models.CharField(max_length=40,)
+    genero = models.CharField(max_length=40,
+            choices=tipos_generos, default=0)
+
+    def __str__(self):
+        return self.Inscripcion

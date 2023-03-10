@@ -32,16 +32,22 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "admin_interface",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'import_export',
     'Home',
     'Registro',
-    'Nosotros'
+    'Nosotros',
+    'colorfield',
+    
 ]
+
+X_FRAME_OPTIONS="SAMEORIGIN" 
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -85,7 +91,9 @@ DATABASES = {
         'PASSWORD': '2000',
         'HOST': 'LocalHost',
         'PORT': '3306',
-        
+        'OPTIONS':{
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+        }
     }
 }
 

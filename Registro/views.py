@@ -4,8 +4,20 @@ from Registro.models import *
 from django.views.generic import *
 from django.contrib.auth import *
 
+def guardar_formulario(request):
+    if request.method == 'POST':
+        form = FormRegistro(request.POST)
+        if form.is_valid():
+            Usuario = form.save()
+            Usuario.save()
+            return render(request, 'registro.html') 
+    else:
+        form = FormRegistron()
+    return render(request, 'Registro/completado.html', {'form': form})
 
-# Create your views here.
+
+
+
 class Usuario_Inscripsion(CreateView):
     model = Usuario
     success_url = 'completado/'
@@ -15,17 +27,3 @@ class Usuario_Inscripsion(CreateView):
 def Completado(request):
     return render (request, 'Registro/completado.html')
 
-
-
-
-def guardar_formulario(request):
-    if request.method == 'POST':
-        form = FormRegistro(request.POST)
-        if form.is_valid():
-            # Guardamos los datos del formulario en la base de datos
-            Usuario = form.save()
-            Usuario.save()
-            return render(request, 'completado.html') # Redirigimos a una página de éxito
-    #else:
-        #form = FormRegistron()
-    #return render(request, 'Registro.html', {'form': form})s   
