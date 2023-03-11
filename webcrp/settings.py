@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'import_export',
+    "colorfield",
     'Home',
     'Registro',
     'Nosotros',
@@ -89,7 +90,7 @@ DATABASES = {
         'NAME': 'Webcrp',
         'USER': 'root',
         'PASSWORD': '2000',
-        'HOST': 'LocalHost',
+        'HOST': 'localhost',
         'PORT': '3306',
         'OPTIONS':{
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"

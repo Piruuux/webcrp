@@ -1,3 +1,8 @@
+<<<<<<< Updated upstream
 django == 3.10.5
 pilow
+=======
+django == 4.1.2
+pillow
+>>>>>>> Stashed changes
 django-admin-interface
