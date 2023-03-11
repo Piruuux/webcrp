@@ -51,4 +51,3 @@ class Usuario(models.Model):
 
 
 
-

@@ -39,13 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'import_export',
-    "colorfield",
     'Home',
     'Registro',
     'Nosotros',
-    'colorfield',
-    
+    'Datos',
+    "colorfield",
 ]
 
 X_FRAME_OPTIONS="SAMEORIGIN" 
