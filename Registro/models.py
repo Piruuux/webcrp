@@ -48,17 +48,7 @@ class Usuario(models.Model):
             choices=tipos_categorias, default=0)
     email=models.EmailField()
 
-    def __str__(self):
-        return self.Usuario
 
 
 
 
-class Inscripcion(models.Model):
-    nombre = models.CharField(max_length=40,)
-    apellido = models.CharField(max_length=40,)
-    genero = models.CharField(max_length=40,
-            choices=tipos_generos, default=0)
-
-    def __str__(self):
-        return self.Inscripcion

@@ -16,11 +16,5 @@ class UsuarioAdmin(ImportExportModelAdmin,admin.ModelAdmin):
     form = FormRegistro
 
 
-def activacion_logica_Usuario(self, request, queryset):
-    for autor in queryset:
-        autor.estado = False
-        autor.save()
-
 admin.site.register(Usuario, UsuarioAdmin)
-admin.site.register(Inscripcion)
 
